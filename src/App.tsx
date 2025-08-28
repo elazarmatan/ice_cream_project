@@ -5,7 +5,7 @@ import Cart from './componnents/cart'
 import Logo from './componnents/logo'
 
 function App() {
-  const [iceCreams, setIceCreams] = useState([{name:'vanile',price:4,image:'../src/assets/images/vanile.png',amount:6},{name:'choclate',price:3,image:'../src/assets/images/choclate.png',amount:8},{name:'mango',price:6,image:'../src/assets/images/mango.png',amount:10}]);
+  const iceCreams = [{name:'vanile',price:4,image:'../src/assets/images/vanile.png',amount:0},{name:'choclate',price:3,image:'../src/assets/images/choclate.png',amount:8},{name:'mango',price:6,image:'../src/assets/images/mango.png',amount:10}];
   const [showOnlyAvailable, setOnlyAvailable] = useState(false);
   const [count,setCount] = useState(0)
   const [price,setprice] = useState(0)

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function IceCream(props:{name:string,price:number,image:string,amount:number,setAllCount,setPrice}){
+export default function IceCream(props:{name:string,price:number,image:string,amount:number,setAllCount:any,setPrice:any}){
     const [count,setCount] = useState(0)
     const [iceAmount,setAmount] = useState(props.amount)
     return <div className="card">
@@ -12,8 +12,8 @@ export default function IceCream(props:{name:string,price:number,image:string,am
         <button onClick={() => {
             if(iceAmount){
             setCount(count+1)
-            props.setAllCount(c => c+1)
-            props.setPrice(c => c + props.price)
+            props.setAllCount((c:number) => c+1)
+            props.setPrice((c:number) => c + props.price)
             setAmount(iceAmount - 1)
             }
         }}>+</button>
@@ -22,8 +22,8 @@ export default function IceCream(props:{name:string,price:number,image:string,am
         <button onClick={() => {
             if(count){
             setCount(count-1)
-            props.setAllCount(c => c-1)
-            props.setPrice(c => c - props.price)
+            props.setAllCount((c:number) => c-1)
+            props.setPrice((c:number) => c - props.price)
             setAmount(iceAmount + 1)
             }
         }}>-</button>
