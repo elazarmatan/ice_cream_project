@@ -4,7 +4,9 @@ main{
   gap: 2%;
 }
 .card{
-  
+  background: aliceblue;
+  padding: 4%;
+  border-radius: 10px;
 }
 .iceImg{
   height: 200px;
@@ -16,5 +18,11 @@ main{
   font-weight: bold;
 }
 #showOnlyAvailable{
-  
+  display: flex;
+  justify-content: flex-end;
+}
+button:hover {
+  background: rgb(191, 219, 219);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
