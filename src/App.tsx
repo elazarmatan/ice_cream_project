@@ -16,9 +16,9 @@ function App() {
     <main>
       {!showOnlyAvailable ? iceCreams.map(c => (
         <IceCream key={c.name} name={c.name} price={c.price} image={c.image} amount={c.amount} setAllCount={setCount} setPrice={setprice}/>
-      )) : (iceCreams.filter(flavor => flavor.amount)).length?iceCreams.map(c => (
+      )) : iceCreams.filter(flavor => flavor.amount).map(c => (
         <IceCream key={c.name} name={c.name} price={c.price} image={c.image} amount={c.amount} setAllCount={setCount} setPrice={setprice}/>
-      )):<h1 className="alert">No reasons to show</h1>}
+      ))}
     </main>
      <Cart count={count} price={price}/>
     </>
