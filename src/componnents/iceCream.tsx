@@ -5,7 +5,7 @@ export default function IceCream(props:{name:string,price:number,image:string,am
     const [iceAmount,setAmount] = useState(props.amount)
     return <div className="card">
         <h2 className="iceName">{props.name}</h2>
-        <img src={props.image} className="iceImg"/>
+        <img src={props.image} className="iceImg" alt="ice cream"/>
         <p>price: {props.price}</p>
         <p>amount: {props.amount}</p>
        {(iceAmount?
